@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class Griffindor extends  Hogwarts{
     private int nobility;
     private int honor;
@@ -41,5 +39,19 @@ public class Griffindor extends  Hogwarts{
                 "nobility= " + nobility +
                 ", honor= " + honor +
                 ", courage= " + courage +".";
+    }
+
+    public void compareStudentGriffindor(Griffindor g) {
+        int sum1 = 0;
+        int sum2 = 0;
+
+        sum1 = this.getNobility() + this.getHonor() + this.getCourage();
+        sum2 = g.getNobility() + g.getHonor() + g.getCourage();
+
+        if (sum1 > sum2) {
+            System.out.println(this.getName() + " лучший Гриффиндорец, чем " + g.getName());
+        } else {
+            System.out.println(g.getName() + " лучший Гриффиндорец, чем " + this.getName());
+        }
     }
 }

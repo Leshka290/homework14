@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.List;
-
 public class Hogwarts {
     private String name;
     private int power;
@@ -42,4 +39,22 @@ public class Hogwarts {
                 ", transgression= " + transgression;
     }
 
+    public void studentInfo() {
+        System.out.println(this);
+    }
+
+    public void compareStudentHogwarts(Hogwarts h) {
+        int sum1 = 0;
+        int sum2 = 0;
+
+        sum1 = this.getPower() + this.getTransgression();
+        sum2 = h.getPower() + h.getTransgression();
+
+        if(sum1 > sum2) {
+            System.out.println(this.getName() + " обладает бОльшей мощностью магии, чем " + h.getName());
+        }
+        else {
+            System.out.println(h.getName() + " обладает бОльшей мощностью магии, чем " + this.getName());
+        }
+    }
 }
